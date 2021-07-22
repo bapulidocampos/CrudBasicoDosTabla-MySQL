@@ -1,0 +1,66 @@
+
+<div class="container">
+    <p>AGREGAR </p>
+    <div class="row">
+        <div class="col-sm-6">
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Nombre</label>
+                    <input [(ngModel)]="equipo.nombre" type="text" class="form-control" name="nombre">
+                </div>
+                
+                <div class="mb-3">
+                    <label class="form-label">Apellido</label>
+                    <input [(ngModel)]="equipo.apellido" type="text" class="form-control" name="nombre">
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Cedula</label>
+                    <input [(ngModel)]="equipo.cedula" type="text" class="form-control" name="cedula">
+                </div>
+                 <div class="mb-3">
+<!--[(ngModel)]="equipo.fecha_nac" -->
+                    <label class="form-label">Fecha Nacimiento</label>
+                    <input [ngModel]='equipo.fecha_nac | date:"yyyy-MM-dd" ' id="fechi" type="date" class="form-control" name="fecha_nac">
+                </div> 
+                 <div class="mb-3">
+                    <label class="form-label">Telefono</label>
+                    <input [(ngModel)]="equipo.telefono" type="text" class="form-control" name="telefono">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Sexo</label>
+                    <input [(ngModel)]="equipo.sexo" type="text" class="form-control" name="sexo">
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Profesión</label>
+                    <input [(ngModel)]="equipo.profesion" type="text" class="form-control" name="profesion">
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Municipio</label>
+                    <input [(ngModel)]="equipo.municipio" type="text" class="form-control" name="municipio">
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Dirección</label>
+                    <input [(ngModel)]="equipo.direccion" type="text" class="form-control" name="direccion">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Vehículo</label>
+                    <input [(ngModel)]="equipo.vehiculo" type="text" class="form-control" name="vehiculo">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Marca</label>
+                    <input [(ngModel)]="equipo.marca" type="text" class="form-control" name="marca">
+                </div>
+                 <div class="mb-3">
+                    <label class="form-label">Año</label>
+                    <input [(ngModel)]="equipo.ano" type="text" class="form-control" name="ano">
+                </div>
+                
+                <button (click)="agregar()" class="btn btn-primary">Agregar</button>
+            </form>
+        </div>
+
+
+
+    </div>
+    
+</div>

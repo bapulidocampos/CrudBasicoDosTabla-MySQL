@@ -1,0 +1,55 @@
+
+
+<div pull-left class="container col-sm-12" >
+    <p>lISTA DE PERSONAS!</p>
+
+    <button routerLink="/add" type="button" class="btn btn-dark">Agregar </button>
+
+    <table class="table col-sm-10">
+        <thead>
+          <tr>
+          <!--  <th scope="col">Id</th> -->
+            <th scope="col">Nombre Apellido</th>
+           <!-- <th scope="col">Apellido</th>-->
+            <th scope="col">Cedula</th>
+            <th scope="col">Fecha Nacimiento</th>
+
+             <th scope="col">Telefono</th>
+              <th scope="col">Sexo</th>
+            <th scope="col">Profesión</th>
+            <th scope="col">Municipio</th>
+             <th scope="col">Direccion</th>
+              <th scope="col">Vehiculo</th>
+            <th scope="col">Marca</th>
+             <th scope="col">Año</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let equipo of ListarEquipo">
+          <!--  <th>{{equipo.id}}</th>-->
+            <td>{{equipo.nombre}}&nbsp;{{equipo.apellido}}</td>
+           <!--  <th>{{equipo.apellido}}</th> -->
+            <td>{{equipo.cedula}}</td>
+
+            <td>{{equipo.fecha_nac}}</td>
+            <td>{{equipo.telefono}}</td>
+
+            <td>{{equipo.sexo}}</td>
+            <td>{{equipo.profesion}}</td>
+            <td>{{equipo.municipio}}</td>
+            <td>{{equipo.direccion}}</td>
+            <td>{{equipo.vehiculo}}</td>
+            <td>{{equipo.marca}}</td>
+            <td>{{equipo.ano}}</td>
+           
+            <td>
+                <button (click)="modificar(equipo.id)" type="button" class="btn btn-primary">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminar(equipo.id)" type="button" class="btn btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
